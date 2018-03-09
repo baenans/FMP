@@ -173,10 +173,10 @@
     <Compile Include="Assets\Scripts\BulletCode.cs" />
     <Compile Include="Assets\Scripts\CameraCollision.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\KYLE.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
-    <Compile Include="Assets\Scripts\Strafe.cs" />
     <Compile Include="Assets\SwitchWeapon.cs" />
     <Compile Include="Assets\Test Script\MMOCharacterController.cs" />
     <Compile Include="Assets\Test Script\MovementPlayer.cs" />

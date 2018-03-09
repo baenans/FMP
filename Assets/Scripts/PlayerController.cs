@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 
 	public float turnSmoothing = 15f; // A smoothing value for turning the player.
 	public float speedDampTime = 0.1f; // The damping for the speed parameter
-    public float walkSpeed = 2;
     public float speed = 6.0F;
 	public float jumpForce = 7;
 	public float DoubleJumpPower;
@@ -22,12 +21,7 @@ public class PlayerController : MonoBehaviour
 	public bool Strafe = false;
     public float threshold;
 
-
-    // Functions
-    void Awake()
-    {
-        //anim = GetComponent<Animator>();
-    }
+    public float playerHealth = 100;
 
     private void Start()
     {
@@ -38,37 +32,58 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Cache the inputs.
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("LeftStickHorizontal");
+        float v = Input.GetAxis("LeftStickVertical");
         MovementManagement(h, v);
         if (transform.position.y < threshold)
             transform.position = new Vector3(0, 0, 0);
-        if (IsGrounded() && Input.GetKey(KeyCode.Space))
+
+        if (IsGrounded() && Input.GetButton("Jump"))
         {
+            DoubleJump = false;
             rigidbodyT.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
+            rigidbodyT.drag = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && DoubleJump == false)
+        else if ((Input.GetButtonDown("Jump")) && DoubleJump == false)
         {
-            DoubleJump = true;
             rigidbodyT.AddForce(Vector3.up * jumpForce * DoubleJumpPower, ForceMode.Impulse);
+            rigidbodyT.drag = 0;
+            DoubleJump = true;
+        }
+        else if (Input.GetButton("Jump") && !IsGrounded() && DoubleJump == true)
+        {
+            rigidbodyT.drag = 5;
+        }
+        else 
+        {
+            rigidbodyT.drag = 0;
+        }
+        if (playerHealth <= 0)
+        {
+            Destroy(GameObject.FindWithTag("Player"));
+
+            Debug.Log("You Died");
         }
 
     }
 
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-		
-		//if (IsGrounded () && Input.GetKey (KeyCode.Space)) {
-		//	rigidbodyT.AddForce (Vector3.up * jumpForce, ForceMode.Impulse);
+        if (collision.collider.tag == "Bullet")
+        {
+            playerHealth -= 20;
+            Debug.Log("Hit!");
+        }
 
-		//} 
-		//else if (Input.GetKeyDown (KeyCode.Space) && DoubleJump == false)
-		//{ 
-		//	DoubleJump = true;
-		//	rigidbodyT.AddForce (Vector3.up * jumpForce * DoubleJumpPower, ForceMode.Impulse);
-		//}
     }
+    /* void OnTriggerEnter(Collider other)
+   {
+       if (other.tag == "Bullet")
+       {
+           Debug.Log("aaaaaaaa");
+           playerHealth -= 1000;
+       }
+   } */
 
     /////////////////////////////////////////////CHARACTER MOVEMENT/////////////////////////////////////////
 
@@ -125,7 +140,8 @@ public class PlayerController : MonoBehaviour
     {        
 		if (Physics.Raycast(gameObject.transform.position,Vector3.down,1))
 			{
-				DoubleJump = false;
+            rigidbodyT.drag = 0;
+            DoubleJump = false;
 				return true;
 			} else 
 			{
