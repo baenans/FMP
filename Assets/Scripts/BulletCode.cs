@@ -9,23 +9,14 @@ public class BulletCode : MonoBehaviour {
 	public float Drop;
 	public Rigidbody rb;
 
-    // Use this for initialization
-    void Start()
-    {
-        rb = gameObject.GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * Speed);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-        }
-    }
-
-    // Update is called once per frame
-    void Update () {
+	// Use this for initialization
+	void Start () {
+		rb = gameObject.GetComponent<Rigidbody> ();
+		rb.AddForce (transform.forward * Speed);
+	}
+	
+	// Update is called once per frame
+	void Update () {
 		
 	}
 }

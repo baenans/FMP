@@ -23,10 +23,10 @@ public class CameraFollow : MonoBehaviour {
 	private float rotY = 0.0f;
 	private float rotX = 0.0f;
 
-    CameraFollow script;
 
-    // Use this for initialization
-    void Start () {
+
+	// Use this for initialization
+	void Start () {
 		Vector3 rot = transform.localRotation.eulerAngles;
 		rotY = rot.y;
 		rotX = rot.x;
@@ -40,8 +40,8 @@ public class CameraFollow : MonoBehaviour {
 		// We setup the rotation of the sticks here
 		float inputX = Input.GetAxis ("RightStickHorizontal");
 		float inputZ = Input.GetAxis ("RightStickVertical");
-		mouseX = Input.GetAxis ("RightStickHorizontal");
-		mouseY = Input.GetAxis ("RightStickVertical");
+		mouseX = Input.GetAxis ("Mouse X");
+		mouseY = Input.GetAxis ("Mouse Y");
 		finalInputX = inputX + mouseX;
 		finalInputZ = inputZ + mouseY;
 
@@ -54,19 +54,9 @@ public class CameraFollow : MonoBehaviour {
 		transform.rotation = localRotation;
 
 
-        if (GameObject.Find("Cube").GetComponent<PlayerController>().playerHealth <= 0) //something aint right here
-        {
-            script = GetComponent<CameraFollow>();
-            script.enabled = false;
-        }
-    }
+	}
 
-    void CheckScript()
-    {
-    }
-
-
-    void LateUpdate () {
+	void LateUpdate () {
 		CameraUpdater ();
 	}
 

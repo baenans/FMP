@@ -33,7 +33,7 @@ public class Shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton("Fire1")) 
+		if (Input.GetMouseButton(0)) 
 		{
 			if (Ammo >= 1) {
 				if (FireTimer >= FireRate) {
@@ -64,3 +64,10 @@ public class Shooting : MonoBehaviour {
 	}
 }
 
+
+//Ammo -= 1;
+	//	GameObject bullet = Instantiate(Bullet, Firepoint.transform.position, Firepoint.transform.rotation);
+//BulletCode BullInfo = bullet.GetComponent<BulletCode>();
+//BullInfo.Speed = GunSpeed;
+	//	BullInfo.Damage = GunDamage;
+		//BullInfo.Drop = GunDrop;
