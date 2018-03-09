@@ -6,7 +6,6 @@ public class CameraFollow : MonoBehaviour {
 
 	public float CameraMoveSpeed = 120.0f;
 	public GameObject CameraFollowObj;
-	Vector3 FollowPOS;
 	public float clampAngle = 80.0f;
 	public float inputSensitivity = 150.0f;
 	public GameObject CameraObj;
@@ -23,10 +22,8 @@ public class CameraFollow : MonoBehaviour {
 	private float rotY = 0.0f;
 	private float rotX = 0.0f;
 
-
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		Vector3 rot = transform.localRotation.eulerAngles;
 		rotY = rot.y;
 		rotX = rot.x;
@@ -38,6 +35,8 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
 
 		// We setup the rotation of the sticks here
+
+
 		float inputX = Input.GetAxis ("RightStickHorizontal");
 		float inputZ = Input.GetAxis ("RightStickVertical");
 		mouseX = Input.GetAxis ("Mouse X");
@@ -54,9 +53,15 @@ public class CameraFollow : MonoBehaviour {
 		transform.rotation = localRotation;
 
 
-	}
+       
+    }
 
-	void LateUpdate () {
+    void CheckScript()
+    {
+    }
+
+
+    void LateUpdate () {
 		CameraUpdater ();
 	}
 

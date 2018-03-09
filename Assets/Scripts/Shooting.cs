@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour {
 
+
+    public GameObject Player;
+    public bool Strafe;
 	public GameObject Bullet;
 	public GameObject Firepoint;
 
@@ -24,6 +27,7 @@ public class Shooting : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+
         pellets = new List<Quaternion>(pelletCount);
         for (int i = 0; i < pelletCount; i++)
         {
@@ -33,7 +37,16 @@ public class Shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton(0)) 
+
+        Strafe = Player.GetComponent<PlayerController2>().Strafe;
+
+        if (Strafe == true)
+        {
+            Aim();
+        }
+
+
+		if (Input.GetButton("Fire1")) 
 		{
 			if (Ammo >= 1) {
 				if (FireTimer >= FireRate) {
@@ -62,12 +75,15 @@ public class Shooting : MonoBehaviour {
             i++;
         }
 	}
+
+    void Aim()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, 1000))
+        {
+            transform.LookAt(hit.point);
+        }
+    }
 }
 
-
-//Ammo -= 1;
-	//	GameObject bullet = Instantiate(Bullet, Firepoint.transform.position, Firepoint.transform.rotation);
-//BulletCode BullInfo = bullet.GetComponent<BulletCode>();
-//BullInfo.Speed = GunSpeed;
-	//	BullInfo.Damage = GunDamage;
-		//BullInfo.Drop = GunDrop;
