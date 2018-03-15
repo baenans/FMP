@@ -1,4 +1,4 @@
 sceneSetups:
-- path: M:/FMP/FMP/Assets/test.unity
+- path: Assets/test.unity
   isLoaded: 1
   isActive: 1

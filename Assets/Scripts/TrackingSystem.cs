@@ -16,7 +16,7 @@ public class TrackingSystem : MonoBehaviour
     void Update()
     {
 
-        m_target = GameObject.FindGameObjectWithTag("Enemy").transform;
+        m_target = GameObject.FindGameObjectWithTag("Player").transform;
 
         if (m_target)
         {

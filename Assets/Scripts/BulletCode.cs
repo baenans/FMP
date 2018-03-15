@@ -22,6 +22,10 @@ public class BulletCode : MonoBehaviour {
         {
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
+        else if (collision.gameObject.tag == "Skybox")
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

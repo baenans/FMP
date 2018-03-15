@@ -118,6 +118,24 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="ProBuilderCore-Unity5">
+      <HintPath>Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="pb_Stl">
+      <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="Poly2Tri">
+      <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderEditor-Unity5">
+      <HintPath>Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps-Unity5">
+      <HintPath>Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="KdTreeLib">
+      <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="FMP.csproj">
@@ -126,6 +144,103 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushMode.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeMesh.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModePaint.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModePrefab.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeRaiseLower.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeSculpt.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeSmooth.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeTexture.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_BrushSettings.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_BrushTarget.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_ColorPalette.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_Delegate.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_EditableObject.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_LocalPref.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_PrefabAndSettings.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_PrefabPalette.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_PreferenceDictionary.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_RaycastHit.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_ReflectionUtil.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Enum\z_BrushTool.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_About.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_AdditionalVertexStreamsEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_AttributeLayoutContainerEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_AttributeLayoutJsonEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_BlendMaterialInspector.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_BrushSettingsEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_ColorPaletteEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_Editor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_GlobalSettingsEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_MeshFilterEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_PrefabPaletteEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_PreferenceDictionaryEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_SplatWeightEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_ZoomOverrideEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_AssetPreview.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_BakeAdditionalVertexStreams.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_Debug.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_EditorUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_GUI.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_GUILayout.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_Handles.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_IconImporter.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_IconUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_PostProcessTextureBlend.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_Pref.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_SceneUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_ShaderUtil.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_AboutWindow.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateAvailable.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateCheck.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_VersionInfo.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_VersionUtil.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Editor\ClearUnusedAttributes.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Editor\CreateShadowObject.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Editor\CustomAction.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Editor\EditorCallbackViewer.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Editor\RenameNewObjects.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Editor\SetCustomUnwrapParams.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\Addons\pb_Fbx.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Actions\pb_ExportObj.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Actions\pb_GenerateUV2.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Actions\pb_MakeMeshAsset.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Actions\pb_ProBuilderize.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Actions\pb_StripProBuilderScripts.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_BridgeEdges.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_ConformNormals.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_ConnectEdges.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_DetachDeleteFace.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_ExtrudeElement.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_FlipEdge.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_FlipNormals.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_FreezeTransform.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_MergeFaces.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_SetPivot.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_Triangulate.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Geometry\pb_VertexMergeWeld.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_CleanLeakedMeshes.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_ForceSceneRefresh.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_RebuildMeshes.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_RebuildSharedIndices.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_RemoveDegenerateTris.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_RepairColors.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_RepairMeshReferences.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_RepairUV.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_ResetEntityMaterials.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Repair\pb_UpgradeBasicToAdvanced.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Selection\pb_EdgeSelection.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Selection\pb_ExpandSelection.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Selection\pb_InvertSelection.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Selection\pb_MaterialSelection.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Tools\pb_BooleanInterface.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Tools\pb_MaterialSelection.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\MenuItems\Window\pb_ProBuilderMenuItems.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_MenuItems.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_MissingScriptEditor.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_Preferences.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_ScenePostProcessor.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrushes\Editor\CurvedStairBrushInspector.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrushes\Editor\StairBrushInspector.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Editor\ExpandPropertiesDrawer.cs" />
@@ -139,6 +254,56 @@
     <Compile Include="Assets\SabreCSG\Scripts\Editor\Utilities\UtilityShortcuts.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
+    <None Include="Assets\ProCore\Polybrush\README.txt" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlendAndSnow.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend_WithMetaData.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Noise.cginc" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_BaseWithDecals.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_DiffuseVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_Overlay.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_StandardVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendBmp.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendBmp_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendHeight.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendHeight_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendMobile.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendMobile_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendModulate.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendModulate_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendWithVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendWithVertexColor_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlender.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlender_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlend.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlendLegacy.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlendLegacy_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlend_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_VertexBillboard.shader" />
+    <None Include="Assets\ProCore\Polybrush\ThirdPartyLicenses.txt" />
+    <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
+    <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\SabreCSG\Changelog.txt" />
     <None Include="Assets\SabreCSG\Internal\Shaders\BrushPreview.shader" />
     <None Include="Assets\SabreCSG\Internal\Shaders\Grayscale-GUITexture.shader" />

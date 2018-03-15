@@ -18,9 +18,9 @@ public class Enemy : MonoBehaviour {
         }
 
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Bullet")
+        if (collision.collider.tag == "Bullet")
         {
             enemyHealth -= 20;
         }

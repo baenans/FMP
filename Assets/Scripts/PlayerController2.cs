@@ -28,6 +28,7 @@ public class PlayerController2 : MonoBehaviour {
     public bool Strafe;
     public float DoubleJump;
     public bool Jumped;
+    public float playerHealth;
 
 
     public float X;
@@ -161,9 +162,34 @@ public class PlayerController2 : MonoBehaviour {
         {
             if (Horizontal != 0 || Vertical != 0)
             {
+                float ControllerSpeed;
+                float Horizontal2; //electric boogaloo
+                float Vertical2;
 
+                if (Horizontal < 0)
+                {
+                    Horizontal2 = Horizontal * -1;
+                }
+                else
+                {
+                    Horizontal2 = Horizontal;
+                }
+                if (Vertical < 0)
+                {
+                    Vertical2 = Vertical *-1;
+                }
+                else
+                {
+                    Vertical2 = Vertical;
+                }
+
+                ControllerSpeed = Vertical2 + Horizontal2;
+                if (ControllerSpeed > 1)
+                {
+                    ControllerSpeed = 1;
+                }
                 PlayerRotationNorm();
-                transform.Translate(transform.forward * Speed * Time.deltaTime, Space.World);
+                transform.Translate(transform.forward * Speed * Time.deltaTime * ControllerSpeed, Space.World);
                 
             }
         }
