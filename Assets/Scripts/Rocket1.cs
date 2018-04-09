@@ -8,12 +8,14 @@ public class Rocket1 : MonoBehaviour {
     public float Turning;
     public GameObject Target;
     public GameObject EnemyList;
+    public GameObject Reticle;
     bool TargetFound = false;
     public float Range;
     // Use this for initialization
     void Start ()
     {
         EnemyList = GameObject.Find("EnemyList");
+        Reticle = transform.GetChild(1).gameObject;
 	}
 
     // Update is called once per frame
@@ -22,10 +24,11 @@ public class Rocket1 : MonoBehaviour {
 
         if(Target != null)
 {
-            Vector3 direction = Target.transform.position - transform.position;
-            //float distance = Vector3.Distance(Target.transform.position, transform.position);
-            //direction = direction / distance;
 
+            //Reticle.transform.SetParent(Target.transform);
+           // Reticle.transform.position = (Target.transform.position);
+           // Reticle.SetActive(true);
+            Vector3 direction = Target.transform.position - transform.position;
             Quaternion toRotation = Quaternion.FromToRotation(transform.forward, direction);
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Turning * Time.time);
             transform.Translate(transform.forward * Speed * Time.deltaTime, Space.World);

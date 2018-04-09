@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraFollow : MonoBehaviour {
 
@@ -21,7 +22,10 @@ public class CameraFollow : MonoBehaviour {
 	public float smoothY;
 	private float rotY = 0.0f;
 	private float rotX = 0.0f;
-
+    public bool lockCursor = true;
+    public GameObject player;
+    public float JoypadSensitivity = 1;
+    public float threshold;
     // Use this for initialization
     void Start () {
 		Vector3 rot = transform.localRotation.eulerAngles;
@@ -33,12 +37,18 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+       Death();
 
-		// We setup the rotation of the sticks here
+        // We setup the rotation of the sticks here
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            lockCursor = !lockCursor;
+        }
+        Cursor.lockState = lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !lockCursor;
 
-
-		float inputX = Input.GetAxis ("RightStickHorizontal");
-		float inputZ = Input.GetAxis ("RightStickVertical");
+        float inputX = Input.GetAxis ("RightStickHorizontal") * JoypadSensitivity;
+		float inputZ = Input.GetAxis ("RightStickVertical") * JoypadSensitivity;
 		mouseX = Input.GetAxis ("Mouse X");
 		mouseY = Input.GetAxis ("Mouse Y");
 		finalInputX = inputX + mouseX;
@@ -73,4 +83,19 @@ public class CameraFollow : MonoBehaviour {
 		float step = CameraMoveSpeed * Time.deltaTime;
 		transform.position = Vector3.MoveTowards (transform.position, target.position, step);
 	}
+    IEnumerator Waitbeforereset()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("testArena");
+    }
+    void Death()
+    {
+        if (PlayerController2.playerHealth <= 0 || transform.position.y < threshold)
+        {
+            player.gameObject.SetActive(false);
+            StartCoroutine(Waitbeforereset());
+            
+
+        }
+    }
 }

@@ -1,15 +1,42 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
-    public Transform pointA;
-    public Transform pointB;
-    public float speed;
+    [SerializeField]
+    Transform _destination;
 
-    // Update is called once per frame
-    void Update()
+    NavMeshAgent _navMeshAgent;
+
+    // Use this for initialization
+    void Start()
     {
-        transform.position = Vector3.Lerp(pointA.position, pointB.position, Mathf.Sin(Time.time * speed));
+        _navMeshAgent = this.GetComponent<NavMeshAgent>();
+
+        if (_navMeshAgent == null)
+        {
+            Debug.LogError("The nav mesh agent component is not attached to " + gameObject.name);
+        }
+        else
+        {
+            SetDestination();
+        }
+    }
+     void Update()
+    {
+        SetDestination();
+    }
+
+    private void SetDestination()
+    {
+        if (_destination != null)
+        {
+
+            Vector3 targetVector = _destination.transform.position;
+            _navMeshAgent.SetDestination(targetVector);
+        }
     }
 }

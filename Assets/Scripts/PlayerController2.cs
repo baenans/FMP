@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController2 : MonoBehaviour {
-
+    
     public float floating;
     public float falling;
     public float HightOffGround;
@@ -12,7 +13,7 @@ public class PlayerController2 : MonoBehaviour {
     public GameObject Cam;
     float Forward;
     public bool OnGround;
-    public float UpPower;
+    public static float UpPower;
     public float JumpPower;
     public float HC;
     public float VC;
@@ -28,7 +29,23 @@ public class PlayerController2 : MonoBehaviour {
     public bool Strafe;
     public float DoubleJump;
     public bool Jumped;
-    public float playerHealth;
+
+    public float speed;
+    public float target = 270.0F;
+
+
+    public static float playerHealth = 10;
+    public static float experience;
+    public float experienceNeeded = 100;
+    public static int healthlevel;
+    public static float Armor;
+    public bool Armor25 = false;
+    public bool Armor50 = false;
+    public bool ArmorInvincible = false;
+
+    public float currency;
+    public static float souls;
+    public GameObject PlayerStats;
 
 
     public float X;
@@ -36,24 +53,86 @@ public class PlayerController2 : MonoBehaviour {
     public float Z;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        playerHealth = 10;
         RigidbodyT = gameObject.GetComponent<Rigidbody>();
+        healthlevel = 1;
+        experience = 0;
 	}
-
+    public void Health(float newHealth)
+    {
+        playerHealth = newHealth;
+    }
     void Update()
     {
+        ArmorChecker();
+        Experience();
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            experience += 100;
+        }
         IsGrounded();
+        JumpingMovement();
+
         if (Strafe == true)
         {
             RotatingStrafe();
         }
     }
 
+    void HealthIncrease()
+    {
+        healthlevel += 1;
+        experience = 0;
+
+        switch (healthlevel)
+        {
+            case 2:
+                playerHealth = 20;
+                experienceNeeded = 200;
+                break;
+            case 3:
+                playerHealth = 30;
+                experienceNeeded = 300;
+                break;
+            case 4:
+                playerHealth = 40;
+                experienceNeeded = 400;
+                break;
+            case 5 :
+                playerHealth = 50;
+                experienceNeeded = 500;
+                break;
+            //default: 
+        }
+    }
+
+    void Experience()
+    {
+        if (experience >= experienceNeeded)
+        {
+            HealthIncrease();
+        }
+    }
+
+    void Dodging()
+    { 
+        if (Input.GetButtonDown("Crouch") && HC == 0 && VC == 0 && Strafe == false)
+        {
+            RigidbodyT.velocity = Vector3.zero;
+            RigidbodyT.angularVelocity = Vector3.zero;
+            RigidbodyT.AddForce(transform.forward * -150 + transform.up * 0, ForceMode.Impulse);
+            Debug.Log("aaa");
+        }
+
+    }
+
     // Update is called once per frame
     void FixedUpdate ()
-    {
-        
+    { 
         Inputs();
+        Dodging();
         transform.Translate(0, UpPower * Time.deltaTime, 0);
         
         GravityForce();
@@ -135,8 +214,7 @@ public class PlayerController2 : MonoBehaviour {
         Quaternion newRotation = Quaternion.Lerp(RigidbodyT.rotation, targetRotation, turnSmoothing * Time.deltaTime);
         // Change the players rotation to this new rotation.
         RigidbodyT.MoveRotation(newRotation);
-    
-        
+
     }
 
     void RotatingStrafe()
@@ -147,6 +225,24 @@ public class PlayerController2 : MonoBehaviour {
         Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
         Quaternion newRotation = Quaternion.Lerp(RigidbodyT.rotation, targetRotation, turnSmoothing * Time.deltaTime);
         RigidbodyT.MoveRotation(newRotation);
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            RigidbodyT.velocity = Vector3.zero;
+            RigidbodyT.angularVelocity = Vector3.zero;
+            RigidbodyT.AddForce(transform.right * HC * 200 + transform.up * 0, ForceMode.Impulse);
+        }
+        if (Input.GetButtonDown("Crouch") && HC == 0 && VC == 0 && OnGround == true && H == 0 && V == 0)
+        {
+            UpPower += 17;
+            HasDoubleJump = true;
+        }
+        if (Input.GetButtonDown("Crouch") && VC < 0)
+        {
+            RigidbodyT.velocity = Vector3.zero;
+            RigidbodyT.angularVelocity = Vector3.zero;
+            RigidbodyT.AddForce(transform.forward * -200 + transform.up * 0, ForceMode.Impulse);
+        }
     }
 
     void Movement()
@@ -190,7 +286,14 @@ public class PlayerController2 : MonoBehaviour {
                 }
                 PlayerRotationNorm();
                 transform.Translate(transform.forward * Speed * Time.deltaTime * ControllerSpeed, Space.World);
-                
+
+
+                if (Input.GetButtonDown("Crouch"))
+                {
+                    RigidbodyT.velocity = Vector3.zero;
+                    RigidbodyT.angularVelocity = Vector3.zero;
+                    RigidbodyT.AddForce(transform.forward * 200 + transform.up * 0, ForceMode.Impulse);
+                }
             }
         }
        
@@ -236,6 +339,14 @@ public class PlayerController2 : MonoBehaviour {
         }
     }
 
+    void JumpingMovement()
+    {
+        if (Input.GetButton("Crouch") && Input.GetButton("Jump"))
+        {
+            Debug.Log("AAAAAA");
+        }
+    }
+
     void GravityForce()
     {
         if (OnGround == false)
@@ -256,4 +367,34 @@ public class PlayerController2 : MonoBehaviour {
         }
      
     }
+
+    void ArmorChecker()
+    {
+        if (Armor25 == true)
+        {
+            Armor = 25f;
+        }
+        if (Armor50 == true)
+        {
+            Armor = 50f;
+        }
+        if (ArmorInvincible == true)
+        {
+            Armor = 0f;
+        }
+        if (Armor25 == false && Armor50 == false && ArmorInvincible == false)
+        {
+            Armor = 100f;
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "EnemyBullet")
+        {
+            playerHealth -= ((10f * Armor) * Time.deltaTime);
+        }
+    }
+
+
+
 }

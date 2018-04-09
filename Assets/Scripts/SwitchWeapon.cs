@@ -5,12 +5,12 @@ using UnityEngine;
 public class SwitchWeapon : MonoBehaviour {
 
     public int selectedWeapon = 0;
-    public GameObject Wheel;
-    public GameObject weapon1;
-    public GameObject weapon2;
-    public GameObject weapon3;
-    public GameObject weapon4;
-    public GameObject weapon5;
+    //public GameObject Wheel;
+    //public GameObject weapon1;
+    //public GameObject weapon2;
+    //public GameObject weapon3;
+    //public GameObject weapon4;
+    //public GameObject weapon5;
 
     void Start () {
         SelectWeapon();
@@ -19,13 +19,6 @@ public class SwitchWeapon : MonoBehaviour {
 	
 	
 	void Update () {
-
-        if (Input.GetButtonDown("Fire1"))
-            Wheel.SetActive(true);
-        if (Input.GetButtonUp("Fire1"))
-            Wheel.SetActive(false);
-
-
         int previousSelectedWeapon = selectedWeapon;
 
 		if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -47,7 +40,7 @@ public class SwitchWeapon : MonoBehaviour {
         }
     }
 
-    void SelectWeapon ()
+    public void SelectWeapon ()
     {
         int i = 0;
         foreach (Transform weapon in transform)

@@ -93,7 +93,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyList.cs" />
+    <Compile Include="Assets\ArenaSpawner.cs" />
+    <Compile Include="Assets\EnemyAItest.cs" />
+    <Compile Include="Assets\enemyBullets.cs" />
+    <Compile Include="Assets\EnemyPatrol.cs" />
+    <Compile Include="Assets\GrappleHook.cs" />
+    <Compile Include="Assets\healthbar.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
@@ -222,20 +227,31 @@
     <Compile Include="Assets\Scripts\BulletCode.cs" />
     <Compile Include="Assets\Scripts\CameraCollision.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\ConeVision.cs" />
+    <Compile Include="Assets\Scripts\Currency.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyAi.cs" />
     <Compile Include="Assets\Scripts\HUD.cs" />
-    <Compile Include="Assets\Scripts\KYLE.cs" />
+    <Compile Include="Assets\Scripts\JoystickTest.cs" />
+    <Compile Include="Assets\Scripts\JoystickTest2.cs" />
+    <Compile Include="Assets\Scripts\JoystickTest3.cs" />
+    <Compile Include="Assets\Scripts\Knife.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerController2.cs" />
-    <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\ProjectileFire.cs" />
     <Compile Include="Assets\Scripts\Rocket1.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\SwitchWeapon.cs" />
-    <Compile Include="Assets\Scripts\testRotate2.cs" />
+    <Compile Include="Assets\Scripts\TargetReticle.cs" />
+    <Compile Include="Assets\Scripts\TargettingSystem.cs" />
     <Compile Include="Assets\Scripts\TrackingSystem.cs" />
-    <Compile Include="Assets\TargettingSystem.cs" />
+    <Compile Include="Assets\Scripts\Unused\DodgeTestingCode.cs" />
+    <Compile Include="Assets\Scripts\Unused\KYLE.cs" />
+    <Compile Include="Assets\Scripts\Unused\PlayerMotor.cs" />
+    <Compile Include="Assets\Scripts\Unused\testRotate2.cs" />
+    <Compile Include="Assets\SoulCatcher.cs" />
+    <Compile Include="Assets\Waypoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />

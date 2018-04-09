@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletCode : MonoBehaviour {
 
-	public float Speed;
+	public float Speed = 10;
 	public float Damage;
 	public float Drop;
 	public Rigidbody rb;
@@ -25,6 +25,10 @@ public class BulletCode : MonoBehaviour {
         else if (collision.gameObject.tag == "Skybox")
         {
             Destroy(gameObject);
+        }
+        if (collision.collider.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().enemyHealth -= Damage;
         }
     }
 
