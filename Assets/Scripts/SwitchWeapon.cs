@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchWeapon : MonoBehaviour {
 
     public int selectedWeapon = 0;
+    public Animator anim;
     //public GameObject Wheel;
     //public GameObject weapon1;
     //public GameObject weapon2;
@@ -15,12 +16,24 @@ public class SwitchWeapon : MonoBehaviour {
     void Start () {
         SelectWeapon();
         //Wheel.SetActive(false);
+        //anim = GetComponent<Animator>();
     }
 	
 	
 	void Update () {
         int previousSelectedWeapon = selectedWeapon;
-
+        if (Input.GetButtonDown("Melee"))
+        {
+            selectedWeapon = 3;
+        }
+        if (selectedWeapon == 3)
+        {
+            anim.SetBool("Melee", true);
+        }
+        else
+        {
+            anim.SetBool("Melee", false);
+        }
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectedWeapon = 0;
@@ -32,6 +45,10 @@ public class SwitchWeapon : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
         {
             selectedWeapon = 2;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
+        {
+            selectedWeapon = 3;
         }
 
         if (previousSelectedWeapon != selectedWeapon)

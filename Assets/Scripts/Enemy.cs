@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour {
     public GameObject drop;
     int maxSpawnObjects = 10;
     public Vector3 position;
+
+    public bool canDropItem;
     // Use this for initialization
     void Start () {
     }
@@ -31,9 +33,12 @@ public class Enemy : MonoBehaviour {
             {
                 Instantiate(drops, spawnPositions[i], spawnRotation);
             }*/
-        
-        Instantiate(drop, transform.position + transform.right * -1, drop.transform.rotation);
-            Instantiate(drop, transform.position + transform.right * 1, drop.transform.rotation);
+
+            if (canDropItem == true)
+            {
+                Instantiate(drop, transform.position + transform.right * -1, drop.transform.rotation);
+                Instantiate(drop, transform.position + transform.right * 1, drop.transform.rotation);
+            }
             //GameObject go1 = (GameObject)Instantiate(drop, Vector3.zero, Quaternion.identity);
             //GameObject go2 = (GameObject)Instantiate(drop, Vector3.zero, Quaternion.identity);
             //insert currency spawn anim here

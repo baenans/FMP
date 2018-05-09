@@ -14,7 +14,7 @@ public class Currency : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.parent.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
+        transform.parent.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
         
     }
     
@@ -24,7 +24,7 @@ public class Currency : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             player = GameObject.Find("Player");
-            transform.parent.position = Vector3.MoveTowards(transform.position, player.transform.position, currencyAttractionSpeed * Time.deltaTime);
+            transform.parent.position = Vector3.MoveTowards(transform.position, player.transform.position, (currencyAttractionSpeed * Time.deltaTime));
         }
     }
 
