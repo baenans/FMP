@@ -35,7 +35,7 @@ public class Rocket1 : MonoBehaviour {
         }
         else
         {
-            EnemyList.GetComponent<TargettingSystem>().InRange(gameObject, Range);
+            //EnemyList.GetComponent<TargettingSystem>().InRange(gameObject, Range); cancelled out due to bug in flying
             transform.Translate(transform.forward * Speed * Time.deltaTime, Space.World);
         }
 

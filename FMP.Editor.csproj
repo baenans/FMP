@@ -254,6 +254,11 @@
     <Compile Include="Assets\SabreCSG\Scripts\Editor\Utilities\UtilityShortcuts.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Black Hole\ReadMe.txt" />
+    <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole_GradientSmoothing.shader" />
+    <None Include="Assets\Materials\ScreenCutoutShader.shader" />
     <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
     <None Include="Assets\ProCore\Polybrush\README.txt" />
     <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />

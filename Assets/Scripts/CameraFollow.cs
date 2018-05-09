@@ -26,9 +26,11 @@ public class CameraFollow : MonoBehaviour {
     public GameObject player;
     public float JoypadSensitivity = 1;
     public float threshold;
+    public Animator anim;
     // Use this for initialization
     void Start () {
-		Vector3 rot = transform.localRotation.eulerAngles;
+        
+        Vector3 rot = transform.localRotation.eulerAngles;
 		rotY = rot.y;
 		rotX = rot.x;
 		Cursor.lockState = CursorLockMode.Locked;
@@ -85,14 +87,15 @@ public class CameraFollow : MonoBehaviour {
 	}
     IEnumerator Waitbeforereset()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.6f);
         SceneManager.LoadScene("testArena");
     }
     void Death()
     {
         if (PlayerController2.playerHealth <= 0 || transform.position.y < threshold)
         {
-            player.gameObject.SetActive(false);
+            //player.gameObject.SetActive(false);
+            anim.SetTrigger("Death");
             StartCoroutine(Waitbeforereset());
             
 

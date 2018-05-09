@@ -13,6 +13,8 @@ public class Shooting : MonoBehaviour
     public GameObject Firepoint;
     public LayerMask test;
 
+    public GameObject test1;
+
     public GameObject coneVisionObject;
     public bool InRange;
     public GameObject target;
@@ -69,6 +71,7 @@ public class Shooting : MonoBehaviour
             }
             else
             {
+                test1.transform.localEulerAngles = new Vector3(2.322f, -86.00301f, 93.82401f);
                 transform.localEulerAngles = new Vector3(0, 0, 0);
                 target = null;
             }
@@ -100,9 +103,10 @@ public class Shooting : MonoBehaviour
 
     void WalkingAim()
     {
+        var objects = GameObject.FindGameObjectsWithTag("Enemy");
         if (InRange == true && Enemy.AutoAim == true)
         {
-            var objects = GameObject.FindGameObjectsWithTag("Enemy");
+            
             if (!objects.Any())
                 return;
 
@@ -128,7 +132,7 @@ public class Shooting : MonoBehaviour
             var p2 = target.transform.position;
             var position = new Vector3(p2.x, p1.y, p2.z); // does not bend to target
             Vector3 test = target.transform.position;
-            transform.LookAt(target.transform);
+            test1.transform.LookAt(target.transform);
         }
         else
         {
@@ -212,7 +216,7 @@ public class Shooting : MonoBehaviour
 
         if (Physics.Raycast(NewMe, Camera.main.transform.forward, out hit, Mathf.Infinity, test))
         {
-            transform.LookAt(hit.point);
+            test1.transform.LookAt(hit.point);
             Debug.DrawLine(NewMe, hit.point);
         }
     }

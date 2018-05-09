@@ -93,12 +93,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ArenaSpawner.cs" />
-    <Compile Include="Assets\EnemyAItest.cs" />
-    <Compile Include="Assets\enemyBullets.cs" />
-    <Compile Include="Assets\EnemyPatrol.cs" />
-    <Compile Include="Assets\GrappleHook.cs" />
-    <Compile Include="Assets\healthbar.cs" />
+    <Compile Include="Assets\Black Hole\Script\Demo.cs" />
+    <Compile Include="Assets\Black Hole\Script\FreeCamera.cs" />
+    <Compile Include="Assets\PortalCamera.cs" />
+    <Compile Include="Assets\PortalTeleporter.cs" />
+    <Compile Include="Assets\PortalTextureSetup.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
@@ -133,6 +132,7 @@
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+    <Compile Include="Assets\returnTest.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrush.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrushes\CurvedStairBrush.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrushes\StairBrush.cs" />
@@ -223,7 +223,9 @@
     <Compile Include="Assets\SabreCSG\Scripts\UI\Toolbar.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\UI\VertexColorWindow.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\UpdateUtility.cs" />
+    <Compile Include="Assets\Scripts\ArenaSpawner.cs" />
     <Compile Include="Assets\Scripts\Bang.cs" />
+    <Compile Include="Assets\Scripts\Book.cs" />
     <Compile Include="Assets\Scripts\BulletCode.cs" />
     <Compile Include="Assets\Scripts\CameraCollision.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -231,6 +233,11 @@
     <Compile Include="Assets\Scripts\Currency.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyAi.cs" />
+    <Compile Include="Assets\Scripts\EnemyAItest.cs" />
+    <Compile Include="Assets\Scripts\enemyBullets.cs" />
+    <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
+    <Compile Include="Assets\Scripts\GrappleHook.cs" />
+    <Compile Include="Assets\Scripts\healthbar.cs" />
     <Compile Include="Assets\Scripts\HUD.cs" />
     <Compile Include="Assets\Scripts\JoystickTest.cs" />
     <Compile Include="Assets\Scripts\JoystickTest2.cs" />
@@ -242,6 +249,7 @@
     <Compile Include="Assets\Scripts\ProjectileFire.cs" />
     <Compile Include="Assets\Scripts\Rocket1.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\SoulCatcher.cs" />
     <Compile Include="Assets\Scripts\SwitchWeapon.cs" />
     <Compile Include="Assets\Scripts\TargetReticle.cs" />
     <Compile Include="Assets\Scripts\TargettingSystem.cs" />
@@ -250,10 +258,15 @@
     <Compile Include="Assets\Scripts\Unused\KYLE.cs" />
     <Compile Include="Assets\Scripts\Unused\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\Unused\testRotate2.cs" />
-    <Compile Include="Assets\SoulCatcher.cs" />
-    <Compile Include="Assets\Waypoint.cs" />
+    <Compile Include="Assets\Scripts\Waypoint.cs" />
+    <Compile Include="Assets\testreturn.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Black Hole\ReadMe.txt" />
+    <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole_GradientSmoothing.shader" />
+    <None Include="Assets\Materials\ScreenCutoutShader.shader" />
     <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
     <None Include="Assets\ProCore\Polybrush\README.txt" />
     <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />

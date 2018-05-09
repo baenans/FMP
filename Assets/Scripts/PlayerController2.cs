@@ -33,6 +33,8 @@ public class PlayerController2 : MonoBehaviour {
     public float speed;
     public float target = 270.0F;
 
+    Animator anim;
+
 
     public static float playerHealth = 10;
     public static float experience;
@@ -59,13 +61,18 @@ public class PlayerController2 : MonoBehaviour {
         RigidbodyT = gameObject.GetComponent<Rigidbody>();
         healthlevel = 1;
         experience = 0;
-	}
+        anim = GetComponentInChildren<Animator>();
+    }
     public void Health(float newHealth)
     {
         playerHealth = newHealth;
     }
     void Update()
     {
+        if (PlayerController2.playerHealth <= 0)
+        {
+            Speed = 0;
+        }
         ArmorChecker();
         Experience();
         if(Input.GetKeyDown(KeyCode.E))
@@ -120,6 +127,7 @@ public class PlayerController2 : MonoBehaviour {
     { 
         if (Input.GetButtonDown("Crouch") && HC == 0 && VC == 0 && Strafe == false)
         {
+            anim.SetTrigger("Dodge Strafe");
             RigidbodyT.velocity = Vector3.zero;
             RigidbodyT.angularVelocity = Vector3.zero;
             RigidbodyT.AddForce(transform.forward * -150 + transform.up * 0, ForceMode.Impulse);
@@ -150,6 +158,7 @@ public class PlayerController2 : MonoBehaviour {
 
         if (Physics.Raycast(posMiddle, Vector3.down, HightOffGround))
         {
+            anim.SetBool("Jump", false);
             OnGround = true;
             HasDoubleJump = false;
             UpPower = 0;
@@ -195,11 +204,14 @@ public class PlayerController2 : MonoBehaviour {
         if (OnGround == true)
         {
             UpPower += JumpPower;
+            anim.SetBool("Jump", true);
         }
         else if (HasDoubleJump == false)
         {
             UpPower += DoubleJump;
             HasDoubleJump = true;
+            anim.SetBool("Jump", true);
+
         }
     }
 
@@ -226,19 +238,30 @@ public class PlayerController2 : MonoBehaviour {
         Quaternion newRotation = Quaternion.Lerp(RigidbodyT.rotation, targetRotation, turnSmoothing * Time.deltaTime);
         RigidbodyT.MoveRotation(newRotation);
 
+        if (Input.GetButtonUp("Crouch"))
+        {
+            gameObject.GetComponent<TrailRenderer>().enabled = false;
+        }
+
         if (Input.GetButtonDown("Crouch"))
         {
+            gameObject.GetComponent<TrailRenderer>().enabled = true;
+            anim.SetTrigger("Dodge Strafe");
             RigidbodyT.velocity = Vector3.zero;
             RigidbodyT.angularVelocity = Vector3.zero;
             RigidbodyT.AddForce(transform.right * HC * 200 + transform.up * 0, ForceMode.Impulse);
         }
         if (Input.GetButtonDown("Crouch") && HC == 0 && VC == 0 && OnGround == true && H == 0 && V == 0)
         {
+            gameObject.GetComponent<TrailRenderer>().enabled = true;
+            anim.SetTrigger("Dodge Strafe");
             UpPower += 17;
             HasDoubleJump = true;
         }
         if (Input.GetButtonDown("Crouch") && VC < 0)
         {
+            gameObject.GetComponent<TrailRenderer>().enabled = true;
+            anim.SetTrigger("Dodge Strafe");
             RigidbodyT.velocity = Vector3.zero;
             RigidbodyT.angularVelocity = Vector3.zero;
             RigidbodyT.AddForce(transform.forward * -200 + transform.up * 0, ForceMode.Impulse);
@@ -290,9 +313,15 @@ public class PlayerController2 : MonoBehaviour {
 
                 if (Input.GetButtonDown("Crouch"))
                 {
+                    anim.SetTrigger("Dodge");
+                    gameObject.GetComponent<TrailRenderer>().enabled = true;
                     RigidbodyT.velocity = Vector3.zero;
                     RigidbodyT.angularVelocity = Vector3.zero;
                     RigidbodyT.AddForce(transform.forward * 200 + transform.up * 0, ForceMode.Impulse);
+                }
+                if (Input.GetButtonUp("Crouch"))
+                {
+                    gameObject.GetComponent<TrailRenderer>().enabled = false;
                 }
             }
         }
@@ -303,13 +332,20 @@ public class PlayerController2 : MonoBehaviour {
     {
         HC = Input.GetAxis("LeftStickHorizontal");
         VC = Input.GetAxis("LeftStickVertical");
+        anim.SetFloat("BlendX", HC);
+        anim.SetFloat("BlendY", VC);
+
         H = Input.GetAxis("Horizontal");
         V = Input.GetAxis("Vertical");
+        //anim.SetFloat("BlendX", H);
+        //anim.SetFloat("BlendY", V);
+
         if (H != 0 || V != 0)
         {
             Horizontal = H;
             Vertical = V;
             Movement();
+            //Speed = 5;
         }
         else if (HC != 0 || VC != 0)
         {
@@ -322,20 +358,26 @@ public class PlayerController2 : MonoBehaviour {
         {
             Jump();
             Jumped = true;
+            //anim.SetBool("Jump", true);
         }
 
         if (Input.GetButtonUp("Jump"))
         {
+            anim.SetBool("Jump", false);
             Jumped = false;
         }
 
         if (Input.GetButton("Strafe"))
         {
             Strafe = true;
+            anim.SetBool("Strafing", true);
+            anim.SetBool("Platforming", false);
         }
         else
         {
             Strafe = false;
+            anim.SetBool("Strafing", false);
+            anim.SetBool("Platforming", true);
         }
     }
 
@@ -363,6 +405,7 @@ public class PlayerController2 : MonoBehaviour {
             else
             {
                 Gravity = falling;
+
             }
         }
      
