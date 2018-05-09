@@ -8,6 +8,9 @@ public class Bang : MonoBehaviour {
     public float BlastSize;
     public GameObject[] InRange = new GameObject[30];
     int i;
+    public bool isMine = false;
+    public Transform player;
+    public Transform mine;
 
 	// Use this for initialization
 	void Start () {
@@ -61,9 +64,17 @@ public class Bang : MonoBehaviour {
         {
             if (InRange[i] != null)
             {
-                if (InRange[i].tag == "Enemy")
+                if (InRange[i].tag == "Enemy" && isMine == false)
                 {
                     InRange[i].GetComponent<Enemy>().enemyHealth -= Damage;
+                }
+                if (InRange[i].tag == "Player" && isMine == true)
+                {
+                    player = GameObject.Find("Player").transform;
+
+                    float proximity = (mine.transform.position - player.transform.position).magnitude;
+
+                    PlayerController2.playerHealth -= 15 / proximity;
                 }
                 Debug.Log("hit" + InRange[i].name);
             }
