@@ -103,7 +103,15 @@ public class Shooting : MonoBehaviour
 
     void WalkingAim()
     {
+<<<<<<< HEAD
         /*var objects = GameObject.FindGameObjectsWithTag("Enemy");
+=======
+<<<<<<< HEAD
+        /*var objects = GameObject.FindGameObjectsWithTag("Enemy");
+=======
+        var objects = GameObject.FindGameObjectsWithTag("Enemy");
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
         if (InRange == true && Enemy.AutoAim == true)
         {
             
@@ -131,12 +139,31 @@ public class Shooting : MonoBehaviour
             }
             */
         GameObject[] goArray = GameObject.FindGameObjectsWithTag("Enemy");
+<<<<<<< HEAD
 
         if (goArray.Length == 0)
             return;
 
         GameObject closest = goArray[0];
         foreach (GameObject go in goArray)
+=======
+
+<<<<<<< HEAD
+        if (goArray.Length == 0)
+            return;
+
+        GameObject closest = goArray[0];
+        foreach (GameObject go in goArray)
+=======
+            var p1 = transform.position;
+            var p2 = target.transform.position;
+            var position = new Vector3(p2.x, p1.y, p2.z); // does not bend to target
+            Vector3 test = target.transform.position;
+            test1.transform.LookAt(target.transform);
+        }
+        else
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
         {
             if (Vector3.Distance(transform.position, go.transform.position) < Vector3.Distance(transform.position, closest.transform.position))
                 closest = go;

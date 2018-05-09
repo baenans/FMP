@@ -178,6 +178,56 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushMode.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeMesh.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModePaint.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModePrefab.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeRaiseLower.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeSculpt.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeSmooth.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Brush Modes\z_BrushModeTexture.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_BrushSettings.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_BrushTarget.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_ColorPalette.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_Delegate.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_EditableObject.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_LocalPref.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_PrefabAndSettings.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_PrefabPalette.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_PreferenceDictionary.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_RaycastHit.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Classes\z_ReflectionUtil.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Enum\z_BrushTool.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_About.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_AdditionalVertexStreamsEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_AttributeLayoutContainerEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_AttributeLayoutJsonEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_BlendMaterialInspector.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_BrushSettingsEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_ColorPaletteEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_Editor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_GlobalSettingsEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_MeshFilterEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_PrefabPaletteEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_PreferenceDictionaryEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_SplatWeightEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Interface\z_ZoomOverrideEditor.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_AssetPreview.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_BakeAdditionalVertexStreams.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_Debug.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_EditorUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_GUI.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_GUILayout.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_Handles.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_IconImporter.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_IconUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_PostProcessTextureBlend.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_Pref.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_SceneUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Editor\Utility\z_ShaderUtil.cs" />
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_AboutWindow.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateAvailable.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateCheck.cs" />
@@ -249,8 +299,12 @@
   <ItemGroup>
     <None Include="Assets\Black Hole\ReadMe.txt" />
     <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+<<<<<<< HEAD
     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
+=======
+<<<<<<< HEAD
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\L_FG_Assets_Pack_Lite\Demo\Read me01.txt" />
     <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
@@ -296,6 +350,42 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+<<<<<<< HEAD
+=======
+=======
+    <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole_GradientSmoothing.shader" />
+    <None Include="Assets\Materials\ScreenCutoutShader.shader" />
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+    <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
+    <None Include="Assets\ProCore\Polybrush\README.txt" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlendAndSnow.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend_WithMetaData.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Noise.cginc" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_BaseWithDecals.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_DiffuseVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_Overlay.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_StandardVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendBmp.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendBmp_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendHeight.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendHeight_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendMobile.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendMobile_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendModulate.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendModulate_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendWithVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendWithVertexColor_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlender.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlender_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlend.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlendLegacy.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlendLegacy_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlend_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_VertexBillboard.shader" />
+    <None Include="Assets\ProCore\Polybrush\ThirdPartyLicenses.txt" />
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />

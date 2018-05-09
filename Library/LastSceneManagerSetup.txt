@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/HUB.unity
+=======
+- path: Assets/Scenes/testArena.unity
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
   isLoaded: 1
   isActive: 1

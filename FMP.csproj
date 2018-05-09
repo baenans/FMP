@@ -95,6 +95,10 @@
   <ItemGroup>
     <Compile Include="Assets\Black Hole\Script\Demo.cs" />
     <Compile Include="Assets\Black Hole\Script\FreeCamera.cs" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -104,8 +108,11 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\L_FG_Assets_Pack_Lite\Demo\cameraMove.cs" />
     <Compile Include="Assets\Mine.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Plank.cs" />
     <Compile Include="Assets\PlankHit.cs" />
+=======
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <Compile Include="Assets\PortalCamera.cs" />
     <Compile Include="Assets\PortalTeleporter.cs" />
     <Compile Include="Assets\PortalTextureSetup.cs" />
@@ -153,12 +160,52 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+<<<<<<< HEAD
+=======
+=======
+    <Compile Include="Assets\PortalCamera.cs" />
+    <Compile Include="Assets\PortalTeleporter.cs" />
+    <Compile Include="Assets\PortalTextureSetup.cs" />
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Direction.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_MeshChannel.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_MirrorCoordinateSpace.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ModelSource.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_PaintMode.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_PlacementDirection.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_SelectionRenderState.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\MonoBehaviour\z_AdditionalVertexStreams.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\MonoBehaviour\z_OverlayRenderer.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\MonoBehaviour\z_ZoomOverride.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_AttributeLayout.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_ColorMask.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_CommonEdge.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_Edge.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_GradientSerializer.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_IHasDefault.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_IValid.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_Mesh.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_RndVec3.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_SplatSet.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Type\z_SplatWeight.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Math.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_MeshUtility.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Util.cs" />
+    <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Vector.cs" />
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
@@ -166,6 +213,11 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <Compile Include="Assets\returnTest.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrush.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrushes\CurvedStairBrush.cs" />
@@ -294,13 +346,24 @@
     <Compile Include="Assets\Scripts\Unused\testRotate2.cs" />
     <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Compile Include="Assets\testreturn.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Turret.cs" />
+=======
+<<<<<<< HEAD
+    <Compile Include="Assets\Turret.cs" />
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Black Hole\ReadMe.txt" />
     <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+<<<<<<< HEAD
     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
+=======
+<<<<<<< HEAD
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\L_FG_Assets_Pack_Lite\Demo\Read me01.txt" />
     <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
@@ -346,6 +409,42 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+<<<<<<< HEAD
+=======
+=======
+    <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole_GradientSmoothing.shader" />
+    <None Include="Assets\Materials\ScreenCutoutShader.shader" />
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+    <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
+    <None Include="Assets\ProCore\Polybrush\README.txt" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlendAndSnow.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend_WithMetaData.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\Noise.cginc" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_BaseWithDecals.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_DiffuseVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_Overlay.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_StandardVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendBmp.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendBmp_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendHeight.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendHeight_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendMobile.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendMobile_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendModulate.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendModulate_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendWithVertexColor.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlendWithVertexColor_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlender.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TextureBlender_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlend.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlendLegacy.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlendLegacy_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_TriPlanarBlend_SfSrc.shader" />
+    <None Include="Assets\ProCore\Polybrush\Shader\z_VertexBillboard.shader" />
+    <None Include="Assets\ProCore\Polybrush\ThirdPartyLicenses.txt" />
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />

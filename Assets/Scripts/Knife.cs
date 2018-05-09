@@ -19,12 +19,26 @@ public class Knife : MonoBehaviour {
         //rb.transform.position = new Vector3(0.3245453f, 0.5910016f, -0.09316736f);
         if (Input.GetButtonDown("Melee"))
         {
+<<<<<<< HEAD
             attacking = true;
+=======
+<<<<<<< HEAD
+            attacking = true;
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
             anim.SetBool("Stab", true);
         }
         if (Input.GetButtonUp("Melee"))
         {
+<<<<<<< HEAD
             attacking = false;
+=======
+<<<<<<< HEAD
+            attacking = false;
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
             anim.SetBool("Stab", false);
         }
 

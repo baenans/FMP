@@ -88,7 +88,15 @@ public class CameraFollow : MonoBehaviour {
     IEnumerator Waitbeforereset()
     {
         yield return new WaitForSeconds(1.6f);
+<<<<<<< HEAD
         Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+=======
+<<<<<<< HEAD
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+=======
+        SceneManager.LoadScene("testArena");
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
+>>>>>>> 49371caf48a1cf4c5c3f76ec4715b69902f575cd
     }
     void Death()
     {
