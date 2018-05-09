@@ -72,9 +72,12 @@ public class PlayerController2 : MonoBehaviour {
         if (PlayerController2.playerHealth <= 0)
         {
             Speed = 0;
+<<<<<<< HEAD
             print("yuo ded");
             //script = GetComponent(thescript);
             (GetComponent("PlayerController2") as MonoBehaviour).enabled = false;
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
         }
         ArmorChecker();
         Experience();

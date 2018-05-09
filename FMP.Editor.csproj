@@ -296,6 +296,7 @@
   <ItemGroup>
     <None Include="Assets\Black Hole\ReadMe.txt" />
     <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+<<<<<<< HEAD
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\L_FG_Assets_Pack_Lite\Demo\Read me01.txt" />
     <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
@@ -341,6 +342,11 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+=======
+    <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole_GradientSmoothing.shader" />
+    <None Include="Assets\Materials\ScreenCutoutShader.shader" />
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
     <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
     <None Include="Assets\ProCore\Polybrush\README.txt" />
     <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />

@@ -94,7 +94,11 @@ ModelImporter:
     4300000: Armour
     4300002: UpperBody002
     7400000: Idle Basic
+<<<<<<< HEAD
     7400002: mixamo.com
+=======
+    7400002: Idle
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
     9500000: //RootNode
     13700000: UpperBody002
   materials:
@@ -130,7 +134,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
+<<<<<<< HEAD
       name: mixamo.com
+=======
+      name: Idle
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 240

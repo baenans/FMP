@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Assets\Black Hole\Script\Demo.cs" />
     <Compile Include="Assets\Black Hole\Script\FreeCamera.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -151,6 +152,11 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+=======
+    <Compile Include="Assets\PortalCamera.cs" />
+    <Compile Include="Assets\PortalTeleporter.cs" />
+    <Compile Include="Assets\PortalTextureSetup.cs" />
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
@@ -185,6 +191,7 @@
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
@@ -192,6 +199,8 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
     <Compile Include="Assets\returnTest.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrush.cs" />
     <Compile Include="Assets\SabreCSG\Scripts\Brushes\CompoundBrushes\CurvedStairBrush.cs" />
@@ -320,11 +329,15 @@
     <Compile Include="Assets\Scripts\Unused\testRotate2.cs" />
     <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Compile Include="Assets\testreturn.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Turret.cs" />
+=======
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Black Hole\ReadMe.txt" />
     <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
+<<<<<<< HEAD
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\L_FG_Assets_Pack_Lite\Demo\Read me01.txt" />
     <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
@@ -370,6 +383,11 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+=======
+    <None Include="Assets\MAG\Blackhole\Blackhole.shader" />
+    <None Include="Assets\MAG\Blackhole\Blackhole_GradientSmoothing.shader" />
+    <None Include="Assets\Materials\ScreenCutoutShader.shader" />
+>>>>>>> 197a87e2433339b1db2c2d2b6c8e4591c84d238d
     <None Include="Assets\ProCore\Polybrush\Font\Apache License.txt" />
     <None Include="Assets\ProCore\Polybrush\README.txt" />
     <None Include="Assets\ProCore\Polybrush\Shader\Example\z_UnlitTextureBlend.shader" />
